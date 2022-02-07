@@ -1,0 +1,120 @@
+--------- beginning of main
+01-01 00:00:15.871 E/SELinux (  462): avc:  denied  { add } for interface=android.hidl.manager::IServiceManager sid=u:r:recovery:s0 pid=462 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_manager_hwservice:s0 tclass=hwservice_manager permissive=1
+01-01 00:00:15.871 E/SELinux (  462): avc:  denied  { add } for interface=android.hidl.base::IBase sid=u:r:recovery:s0 pid=462 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_base_hwservice:s0 tclass=hwservice_manager permissive=1
+01-01 00:00:15.871 E/SELinux (  462): avc:  denied  { add } for interface=android.hidl.token::ITokenManager sid=u:r:recovery:s0 pid=462 scontext=u:r:recovery:s0 tcontext=u:object_r:hidl_token_hwservice:s0 tclass=hwservice_manager permissive=1
+01-01 00:00:15.878 I/hwservicemanager(  462): hwservicemanager is ready now.
+01-01 00:00:00.923 W/auditd  (  465): type=2000 audit(0.0:1): state=initialized audit_enabled=0 res=1
+01-01 00:00:15.607 I/auditd  (  465): type=1403 audit(0.0:2): policy loaded auid=4294967295 ses=4294967295
+01-01 00:00:15.913 D/QSEECOMD: (  490): qseecom listener services process entry PPID = 1
+01-01 00:00:15.913 E/QSEECOMD: (  490): Listener: index = 0, hierarchy = 0
+01-01 00:00:15.914 D/QSEECOMD: (  490): Init dlopen(librpmb.so, RTLD_NOW) succeeds
+01-01 00:00:15.914 D/QSEECOMD: (  490): Init::Init dlsym(g_FSHandle rpmb_init_service) succeeds
+01-01 00:00:15.914 I/rpmb_emmc(  490): RPMB Mult (512-bytes sector) = 8192, Rel_sec_cnt = 32
+01-01 00:00:15.915 E/DrmLibRpmb(  490): rpmb_init succeeded! with ret = 0
+01-01 00:00:15.915 D/QSEECOMD: (  490): Init rpmb_init_service ret = 0
+01-01 00:00:15.915 D/QSEECOMD: (  490): RPMB system services: init (Listener ID = 8192)
+01-01 00:00:15.915 E/QSEECOMD: (  490): Listener: index = 1, hierarchy = 0
+01-01 00:00:15.915 D/QSEECOMD: (  490): Init dlopen(libssd.so, RTLD_NOW) succeeds
+01-01 00:00:15.915 D/QSEECOMD: (  490): Init::Init dlsym(g_FSHandle ssd_init_service) succeeds
+01-01 00:00:15.928 E/QSEECOMD: (  490): Init dlopen(libsecureui.so, RLTD_NOW) is failed.... dlopen failed: cannot locate symbol "_ZN7android8hardware23getOrCreateCachedBinderEPNS_4hidl4base4V1_05IBaseE" referenced by "/vendor/lib64/vendor.display.config@1.0.so"...
+01-01 00:00:15.928 D/QSEECOMD: (  490): SEC_UI_INIT failed, shall not start secure ui listener
+01-01 00:00:15.928 D/QSEECOMD: (  490): qseecom listener service threads starting!!! 
+01-01 00:00:15.929 D/QSEECOMD: (  490): Total listener services to start = 10
+01-01 00:00:15.929 E/QSEECOMD: (  490): Listener: index = 0, hierarchy = 1
+01-01 00:00:15.929 D/QSEECOMD: (  490): Init dlopen(librpmb.so, RTLD_NOW) succeeds
+01-01 00:00:15.929 D/QSEECOMD: (  490): Init::Init dlsym(g_FSHandle rpmb_start) succeeds
+01-01 00:00:15.929 D/QSEECOMAPI(  490): QSEECom_register_listener 8192 sb_length = 0x6400
+01-01 00:00:15.929 E/ion     (  490): ioctl c0044901 failed with code -1: Not a typewriter
+01-01 00:00:15.929 D/QSEECOMD: (  490): Init rpmb_start ret = 0
+01-01 00:00:15.929 D/QSEECOMD: (  490): RPMB system services: Started (Listener ID = 8192)
+01-01 00:00:15.929 E/QSEECOMD: (  490): Listener: index = 1, hierarchy = 1
+01-01 00:00:15.930 D/QSEECOMD: (  490): Init dlopen(libssd.so, RTLD_NOW) succeeds
+01-01 00:00:15.930 D/QSEECOMD: (  490): Init::Init dlsym(g_FSHandle ssd_start) succeeds
+01-01 00:00:15.930 D/QSEECOMAPI(  490): QSEECom_register_listener 12288 sb_length = 0x5000
+01-01 00:00:15.930 D/QSEECOMD: (  490): Init ssd_start ret = 0
+01-01 00:00:15.930 D/QSEECOMD: (  490): SSD system services: Started (Listener ID = 12288)
+01-01 00:00:15.930 E/QSEECOMD: (  490): Listener: index = 2, hierarchy = 1
+01-01 00:00:15.930 E/QSEECOMD: (  490): Init dlopen(libsecureui.so, RLTD_NOW) is failed.... dlopen failed: library "libhidltransport.so" not found
+01-01 00:00:15.930 E/QSEECOMD: (  490): Listener: index = 3, hierarchy = 1
+01-01 00:00:15.933 D/QSEECOMAPI(  490): QSEECom_register_listener 36864 sb_length = 0x1f4
+--------- beginning of system
+01-01 00:00:15.933 I/QISL    (  490): QSEE Interrupt Service Listener was activated successfully
+01-01 00:00:15.933 D/QSEECOMD: (  490): Init qisl_start ret = 0
+01-01 00:00:15.933 D/QSEECOMD: (  490): interrupt services: Started (Listener ID = 36864)
+01-01 00:00:15.933 E/QSEECOMD: (  490): Listener: index = 7, hierarchy = 1
+01-01 00:00:15.934 D/QSEECOMD: (  490): Init dlopen(libspl.so, RTLD_NOW) succeeds
+01-01 00:00:15.934 D/QSEECOMD: (  490): Init::Init dlsym(g_FSHandle spl_start) succeeds
+01-01 00:00:15.934 D/SPL     (  490): Call QSEECom_register_listener()
+01-01 00:00:15.934 D/QSEECOMAPI(  490): QSEECom_register_listener 45056 sb_length = 0x400
+01-01 00:00:15.934 D/SPL     (  490): Registered listener sucessfully!
+01-01 00:00:15.934 D/SPL     (  490): pipe read-fd [29] write-fd [30]
+01-01 00:00:15.934 D/SPL     (  490): Create thread
+01-01 00:00:15.934 D/SPL     (  490): Thread created sucessfully.
+01-01 00:00:15.934 D/QSEECOMD: (  490): Init spl_start ret = 0
+01-01 00:00:15.934 D/QSEECOMD: (  490): secure processor services: Started (Listener ID = 45056)
+01-01 00:00:15.934 E/QSEECOMD: (  490): Listener: index = 8, hierarchy = 1
+01-01 00:00:15.935 D/QSEECOMD: (  490): QSEECOM DAEMON RUNNING 
+01-01 00:00:15.953 I/SELinux (  505): SELinux: Loaded service_contexts from:
+01-01 00:00:15.954 I/SELinux (  505):     /plat_service_contexts
+01-01 00:00:15.954 I/SELinux (  505):     /vendor_service_contexts
+01-01 00:00:15.956 E/cutils-trace(  504): Error opening trace file: No such file or directory (2)
+01-01 00:00:15.957 E/cutils-trace(  462): Error opening trace file: No such file or directory (2)
+#################################################################################### BUG #######################################################################################################
+01-01 00:00:15.957 E/SELinux (  462): avc:  denied  { find } for interface=android.hardware.gatekeeper::IGatekeeper sid=u:r:recovery:s0 pid=504 scontext=u:r:recovery:s0 tcontext=u:object_r:hal_gatekeeper_hwservice:s0 tclass=hwservice_manager permissive=1
+
+<hal format="hidl">
+        <name>android.hardware.gatekeeper</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IGatekeeper/default</fqname>
+    </hal>
+#############################################################################################################################################################################################
+01-01 00:00:15.958 W//sbin/hwservicemanager(  462): Cannot open /system/manifest.xml
+01-01 00:00:15.961 D/QSEECOMAPI(  503): QSEECom_get_handle sb_length = 0xa000
+01-01 00:00:15.961 D/QSEECOMAPI(  503): App is already loaded QSEE and app id = 1
+01-01 00:00:15.962 E/ion     (  503): ioctl c0044901 failed with code -1: Not a typewriter
+01-01 00:00:15.965 E/KeymasterUtils(  503): TA API Major Version: 4
+01-01 00:00:15.966 E/KeymasterUtils(  503): TA API Minor Version: 0
+01-01 00:00:15.966 E/KeymasterUtils(  503): TA Major Version: 4
+01-01 00:00:15.966 E/KeymasterUtils(  503): TA Minor Version: 529
+#################################################################################### BUG ####################################################################################################
+01-01 00:00:15.972 I/ServiceManagement(  503): Removing namespace from process name android.hardware.keymaster@4.0-service-qti to keymaster@4.0-service-qti.
+
+ <hal format="hidl">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <version>4.0</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@4.0::IKeymasterDevice/default</fqname>
+    </hal>
+#############################################################################################################################################################################################
+01-01 00:00:15.973 E/cutils-trace(  503): Error opening trace file: No such file or directory (2)
+01-01 00:00:15.979 D/vndksupport(  504): Loading /vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so from current namespace instead of sphal namespace.
+01-01 00:00:15.981 E/SELinux (  462): avc:  denied  { add } for interface=android.hardware.keymaster::IKeymasterDevice sid=u:r:recovery:s0 pid=503 scontext=u:r:recovery:s0 tcontext=u:object_r:hal_keymaster_hwservice:s0 tclass=hwservice_manager permissive=1
+01-01 00:00:15.983 D/QSEECOMAPI(  504): QSEECom_get_handle sb_length = 0xa000
+01-01 00:00:15.983 D/QSEECOMAPI(  504): App is already loaded QSEE and app id = 1
+01-01 00:00:15.983 E/ion     (  504): ioctl c0044901 failed with code -1: Not a typewriter
+01-01 00:00:15.987 E/KeymasterUtils(  504): TA API Major Version: 4
+01-01 00:00:15.987 E/KeymasterUtils(  504): TA API Minor Version: 0
+01-01 00:00:15.987 E/KeymasterUtils(  504): TA Major Version: 4
+01-01 00:00:15.987 E/KeymasterUtils(  504): TA Minor Version: 529
+01-01 00:00:15.991 I/ServiceManagement(  504): Removing namespace from process name android.hardware.gatekeeper@1.0-service-qti to gatekeeper@1.0-service-qti.
+01-01 00:00:15.991 E/SELinux (  462): avc:  denied  { add } for interface=android.hardware.gatekeeper::IGatekeeper sid=u:r:recovery:s0 pid=504 scontext=u:r:recovery:s0 tcontext=u:object_r:hal_gatekeeper_hwservice:s0 tclass=hwservice_manager permissive=1
+01-01 00:00:15.991 I/android.hardware.gatekeeper@1.0-service(  504): Registration complete for android.hardware.gatekeeper@1.0::IGatekeeper/default.
+01-01 00:00:16.018 I/ArmToArm64Assembler(  467): generated scanline__00000077:03010101_00008001_00000000 [195 ipp] (241 ins) at [0x707a8483c0:0x707a848784] in 106562 ns
+01-01 00:00:16.133 I/ArmToArm64Assembler(  467): generated scanline__00000077:03545401_00000A01_00000000 [ 69 ipp] (113 ins) at [0x707a848790:0x707a848954] in 55313 ns
+01-01 00:00:16.156 I/ArmToArm64Assembler(  467): generated scanline__00000077:03545401_00000A08_00000000 [ 69 ipp] (116 ins) at [0x707a848960:0x707a848b30] in 52552 ns
+02-01 20:06:24.385 I/ArmToArm64Assembler(  467): generated scanline__00000077:03010102_00008002_00000000 [192 ipp] (238 ins) at [0x707a848b40:0x707a848ef8] in 53959 ns
+02-01 20:06:26.773 I/adbd    (  664): initializing functionfs
+02-01 20:06:26.774 I/adbd    (  664): opening control endpoint /dev/usb-ffs/adb/ep0
+02-01 20:06:26.781 I/adbd    (  664): functionfs successfully initialized
+02-01 20:06:26.781 I/adbd    (  664): registering usb transport
+02-01 20:06:26.782 E/cutils-trace(  664): Error opening trace file: No such file or directory (2)
+02-01 20:06:26.794 I/ArmToArm64Assembler(  467): generated scanline__00000077:03545401_00000000_00000000 [ 65 ipp] (94 ins) at [0x707a848f00:0x707a849078] in 82812 ns
